@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">simple file test</title>
+  <desc id="desc">A file with a download arrow</desc>
+  <rect width="64" height="64" rx="14" fill="#101a2d"/>
+  <path d="M17 9h21l10 10v36H17z" fill="#17233a" stroke="#64d6c8" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M38 9v11h10" fill="none" stroke="#64d6c8" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="21" y="35" fill="#eef3fb" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="800" letter-spacing="-.8">sf</text>
+  <path d="M32 39v10m0 0-5-5m5 5 5-5" fill="none" stroke="#f1b36d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
