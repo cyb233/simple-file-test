@@ -39,13 +39,13 @@
             <p class="eyebrow" id="panel-kicker">TEXT FILE</p>
             <h1 id="panel-title">Text</h1>
           </div>
-          <div class="limit-note"><span data-i18n="max">Maximum</span> <strong id="panel-limit">100 MiB</strong></div>
+          <div class="limit-note" data-i18n="sizeGuidance">No hard size cap; browser memory is the practical limit.</div>
         </div>
 
         <form class="generator-form active" data-panel="text" id="text-form">
           <div class="field-grid three">
             <label class="field"><span data-i18n="size">File size</span><input id="text-size" type="number" min="1" step="any" value="10" inputmode="decimal"></label>
-            <label class="field"><span data-i18n="unit">Unit</span><select id="text-unit"><option>KB</option><option>KiB</option><option>MB</option><option selected>MiB</option></select></label>
+            <label class="field"><span data-i18n="unit">Unit</span><select id="text-unit"><option>B</option><option>KiB</option><option selected>MiB</option><option>GiB</option></select></label>
             <label class="field"><span data-i18n="format">Format</span><select id="text-format"><option value="txt">TXT</option><option value="json">JSON</option><option value="yaml">YAML</option><option value="yml">YML</option><option value="csv">CSV</option><option value="xml">XML</option><option value="html">HTML</option><option value="md">Markdown</option></select></label>
           </div>
           <p class="form-tip" data-i18n="tip.text">Text is generated with valid syntax and an exact byte target.</p>
@@ -55,13 +55,13 @@
         <form class="generator-form" data-panel="image" id="image-form" hidden>
           <div class="field-grid three">
             <label class="field"><span data-i18n="size">File size</span><input id="image-size" type="number" min="1" step="any" value="10" inputmode="decimal"></label>
-            <label class="field"><span data-i18n="unit">Unit</span><select id="image-unit"><option>KB</option><option>KiB</option><option>MB</option><option selected>MiB</option></select></label>
+            <label class="field"><span data-i18n="unit">Unit</span><select id="image-unit"><option>B</option><option>KiB</option><option selected>MiB</option><option>GiB</option></select></label>
             <label class="field"><span data-i18n="format">Format</span><select id="image-format"><option value="PNG">PNG</option><option value="JPG">JPG</option><option value="WEBP">WEBP</option></select></label>
           </div>
           <div class="subheading" data-i18n="resolution">Resolution</div>
           <div class="field-grid four">
-            <label class="field"><span data-i18n="width">Width</span><input id="image-width" type="number" min="1" max="8192" value="1920"></label>
-            <label class="field"><span data-i18n="height">Height</span><input id="image-height" type="number" min="1" max="8192" value="1080"></label>
+            <label class="field"><span data-i18n="width">Width</span><input id="image-width" type="number" min="1" value="1920"></label>
+            <label class="field"><span data-i18n="height">Height</span><input id="image-height" type="number" min="1" value="1080"></label>
             <label class="field"><span data-i18n="resolutionUnit">Resolution unit</span><select id="image-resolution-unit"><option selected>px</option><option>in</option><option>cm</option></select></label>
           </div>
           <p class="form-tip" data-i18n="tip.image">The requested resolution is stored in the image header.</p>
@@ -71,15 +71,15 @@
         <form class="generator-form" data-panel="video" id="video-form" hidden>
           <div class="field-grid three">
             <label class="field"><span data-i18n="size">File size</span><input id="video-size" type="number" min="1" step="any" value="10" inputmode="decimal"></label>
-            <label class="field"><span data-i18n="unit">Unit</span><select id="video-unit"><option>KB</option><option>KiB</option><option>MB</option><option selected>MiB</option></select></label>
-            <label class="field"><span data-i18n="format">Format</span><select id="video-format"><option value="WEBM">WEBM</option><option value="MP4">MP4</option></select></label>
+            <label class="field"><span data-i18n="unit">Unit</span><select id="video-unit"><option>B</option><option>KiB</option><option selected>MiB</option><option>GiB</option></select></label>
+            <label class="field"><span data-i18n="format">Format</span><select id="video-format"><option value="WEBM">WEBM</option><option value="MP4" selected>MP4</option></select></label>
           </div>
           <div class="subheading" data-i18n="resolution">Resolution</div>
           <div class="field-grid four">
-            <label class="field"><span data-i18n="width">Width</span><input id="video-width" type="number" min="1" max="4096" value="1280"></label>
-            <label class="field"><span data-i18n="height">Height</span><input id="video-height" type="number" min="1" max="4096" value="720"></label>
+            <label class="field"><span data-i18n="width">Width</span><input id="video-width" type="number" min="1" value="1280"></label>
+            <label class="field"><span data-i18n="height">Height</span><input id="video-height" type="number" min="1" value="720"></label>
             <label class="field"><span data-i18n="resolutionUnit">Resolution unit</span><select id="video-resolution-unit"><option selected>px</option><option>in</option><option>cm</option></select></label>
-            <label class="field"><span data-i18n="duration">Duration</span><div class="input-with-suffix"><input id="video-duration" type="number" min="1" max="30" value="3"><span data-i18n="seconds">seconds</span></div></label>
+            <label class="field"><span data-i18n="duration">Duration</span><div class="input-with-suffix"><input id="video-duration" type="number" min="1" value="3"><span data-i18n="seconds">seconds</span></div></label>
           </div>
           <p class="form-tip" data-i18n="tip.video">A short animated stream is created locally, then padded to size.</p>
           <button class="generate-button" type="submit"><span class="button-icon">↓</span><span data-i18n="generate.video">Generate &amp; download video</span></button>
@@ -88,11 +88,11 @@
         <form class="generator-form" data-panel="audio" id="audio-form" hidden>
           <div class="field-grid three">
             <label class="field"><span data-i18n="size">File size</span><input id="audio-size" type="number" min="1" step="any" value="10" inputmode="decimal"></label>
-            <label class="field"><span data-i18n="unit">Unit</span><select id="audio-unit"><option>KB</option><option>KiB</option><option>MB</option><option selected>MiB</option></select></label>
-            <label class="field"><span data-i18n="format">Format</span><select id="audio-format"><option value="WAV">WAV</option><option value="OGG">OGG</option><option value="MP3">MP3</option></select></label>
+            <label class="field"><span data-i18n="unit">Unit</span><select id="audio-unit"><option>B</option><option>KiB</option><option selected>MiB</option><option>GiB</option></select></label>
+            <label class="field"><span data-i18n="format">Format</span><select id="audio-format"><option value="WAV">WAV</option><option value="OGG">OGG</option><option value="MP3" selected>MP3</option></select></label>
           </div>
           <div class="field-grid three">
-            <label class="field"><span data-i18n="duration">Duration</span><div class="input-with-suffix"><input id="audio-duration" type="number" min="1" max="300" value="10"><span data-i18n="seconds">seconds</span></div></label>
+            <label class="field"><span data-i18n="duration">Duration</span><div class="input-with-suffix"><input id="audio-duration" type="number" min="1" value="10"><span data-i18n="seconds">seconds</span></div></label>
             <label class="field"><span data-i18n="sampleRate">Sample rate</span><select id="audio-rate"><option>44100</option><option selected>48000</option><option>96000</option></select></label>
             <label class="field"><span data-i18n="channels">Channels</span><select id="audio-channels"><option value="1" data-i18n="mono">Mono</option><option value="2" selected data-i18n="stereo">Stereo</option></select></label>
           </div>

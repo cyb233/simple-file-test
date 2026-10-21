@@ -10,18 +10,13 @@ Generate and download test files directly in the browser. No file content is upl
 - Images generated with a requested resolution: PNG, JPG, and WEBP.
 - Short video streams generated locally: WEBM and MP4, depending on browser codec support.
 - Audio generated locally with configurable duration, sample rate, and channels: WAV, OGG, and MP3.
-- File size units: KB, KiB, MB, and MiB. MiB is selected by default.
-- Maximum size validation with automatic reset and a visible message.
+- File size units: B, KiB, MiB, and GiB. MiB is selected by default.
+- Large file warnings that explain the memory and browser responsiveness risks.
 - Chinese, English, and Japanese translations with user selection, browser-language matching, and a configured fallback.
 
-## Limits
+## Size and duration behavior
 
-| File type | Maximum |
-| --- | ---: |
-| Text | 100 MiB |
-| Image | 50 MiB |
-| Video | 100 MiB |
-| Audio | 100 MiB |
+There is no application-defined maximum for file size, duration, or resolution. Very large files may generate slowly, use substantial memory, or cause the browser to become unresponsive. Requests at or above 1 GiB show a warning before generation, while the input remains unchanged and generation is not blocked.
 
 The requested size is used as the target byte length. Some codecs have a minimum valid container size, so a very small media request may produce a file slightly larger than the target. When a selected codec is unavailable, the browser-compatible format and extension are used instead.
 

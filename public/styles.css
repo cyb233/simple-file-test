@@ -36,7 +36,7 @@ select:focus, input:focus, button:focus-visible { outline: 2px solid var(--accen
 .workspace-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; padding-bottom: 28px; border-bottom: 1px solid rgba(148, 170, 204, .14); }
 .eyebrow { color: var(--accent); font: 700 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .14em; margin: 0 0 8px; }
 h1 { margin: 0; font-size: clamp(24px, 4vw, 34px); letter-spacing: -.02em; }
-.limit-note { color: var(--muted); font-size: 12px; white-space: nowrap; padding-top: 4px; }
+.limit-note { color: var(--muted); font-size: 11px; line-height: 1.45; max-width: 260px; text-align: right; padding-top: 4px; }
 .limit-note strong { color: var(--warm); font: 700 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
 .generator-form { padding-top: 30px; }
 .field-grid { display: grid; gap: 16px; }
